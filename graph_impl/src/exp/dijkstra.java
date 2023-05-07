@@ -2,7 +2,7 @@ package exp;
 import java.util.*;
 
 public class dijkstra {
-    public static void dijkstra(int[][] graph, int startVertex) {
+    public dijkstra(int[][] graph, int startVertex) {
         int vertices = graph.length;
         int[] distances = new int[vertices];
         boolean[] visited = new boolean[vertices];

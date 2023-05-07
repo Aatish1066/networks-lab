@@ -13,6 +13,7 @@ public class inputfunc {
             for (int j = 0; j < nodes; j++) {
                 System.out.print(graph[i][j]+" ");
             }}}
+        System.out.println("");
         return 0;
     }
 

@@ -1,6 +1,42 @@
+import exp.dijkstra;
+import exp.inputfunc;
+import exp.prism;
+import exp.CRC;
+import java.util.*;
+import exp.HammingCode;
+
+import static exp.Checksum.check;
 
 public class Main {
     public static void main(String[] args) {
+//        inputfunc graph=new inputfunc();
+//        int[][] g1= graph.input(3);
+//        inputfunc.show(g1,3);
+//        prism p= new prism();
+//        prism.primMST(g1);
+//        dijkstra d=new dijkstra(g1,2);
+//        int[] data = {1, 0, 1, 1, 0, 0, 1}; // the data to be transmitted
+//        int[] generator = {1, 0, 1}; // the generator polynomial
+//        CRC crc = new CRC(generator);
+//        int[] crcResult = crc.calculateCRC(data);
+//        System.out.println(Arrays.toString(crcResult)); // prints [1, 0, 0]
+//        Scanner sc = new Scanner(System.in);
+//        String str = sc.nextLine();
+//        HammingCode h = new HammingCode(str);
+//        sc.close();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Sent message: ");
+        String sentMessage = scanner.nextLine();
+        System.out.print("Received message: ");
+        String receivedMessage = scanner.nextLine();
+        int blockSize = 8;
+        if (check(sentMessage, receivedMessage, blockSize)) {
+            System.out.println("No error");
+        } else {
+            System.out.println("Error");
+        }
+        scanner.close();
+
 
     }
 }
