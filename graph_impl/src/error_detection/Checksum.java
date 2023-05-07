@@ -1,4 +1,4 @@
-package exp;
+package error_detection;
 
 import java.util.Scanner;
 

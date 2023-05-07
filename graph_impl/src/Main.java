@@ -1,11 +1,6 @@
-import exp.dijkstra;
-import exp.inputfunc;
-import exp.prism;
-import exp.CRC;
 import java.util.*;
-import exp.HammingCode;
 
-import static exp.Checksum.check;
+import static error_detection.Checksum.check;
 
 public class Main {
     public static void main(String[] args) {
